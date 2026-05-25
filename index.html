@@ -172,16 +172,16 @@
   .teach-group:first-child { margin-top: 0; }
   .teach-item {
     padding: 0.72rem 0; border-bottom: 1px solid var(--border);
-    display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: baseline;
+    display: block;
   }
   .teach-item:last-child { border-bottom: none; }
-  .teach-name { font-size: 0.98rem; font-weight: 500; color: var(--midnight); }
+  .teach-name { font-size: 0.98rem; font-weight: 400; color: var(--midnight); }
   .teach-info { font-size: 0.86rem; color: var(--muted); }
   .teach-role { font-size: 0.74rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.07em; color: var(--acc); white-space: nowrap; }
 
   .teach-item-sm {
     padding: 0.42rem 0; border-bottom: 1px solid var(--border);
-    display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: baseline;
+    display: block;
   }
   .teach-item-sm:last-child { border-bottom: none; }
   .teach-item-sm .teach-name { font-size: 0.9rem; font-weight: 400; color: var(--sub); }
@@ -225,12 +225,12 @@
       <div>
         <h1>Jongwoo Choi</h1>
         <div class="about-text">
-          <p>I am a postdoctoral fellow in the Department of Biostatistics at Harvard University, working with Prof. <a href="https://jwmi.github.io" target="_blank" style="color:var(--acc);text-decoration:none;border-bottom:1px solid var(--acc)">Jeffrey W. Miller</a>. Prior to joining Harvard, I received my Ph.D. in Statistics from the University of Connecticut, where I was advised by Prof. <a href="https://sites.google.com/site/neilarchspencer" target="_blank" style="color:var(--acc);text-decoration:none;border-bottom:1px solid var(--acc)">Neil A. Spencer</a> and Prof. <a href="http://merlot.stat.uconn.edu/~dey/" target="_blank" style="color:var(--acc);text-decoration:none;border-bottom:1px solid var(--acc)">Dipak K. Dey</a>.</p>
+          <p>I am a postdoctoral fellow in the Department of Biostatistics at Harvard University, working with Prof. <a href="https://jwmi.github.io" target="_blank" style="color:#5b8def;text-decoration:none;border-bottom:1px solid #a8c4f5">Jeffrey W. Miller</a>. Prior to joining Harvard, I received my Ph.D. in Statistics from the University of Connecticut, where I was advised by Prof. <a href="https://sites.google.com/site/neilarchspencer" target="_blank" style="color:#5b8def;text-decoration:none;border-bottom:1px solid #a8c4f5">Neil A. Spencer</a> and Prof. <a href="http://merlot.stat.uconn.edu/~dey/" target="_blank" style="color:#5b8def;text-decoration:none;border-bottom:1px solid #a8c4f5">Dipak K. Dey</a>.</p>
           <p>My current primary research areas are</p>
           <ul>
             <li>Robustness to model misspecification,</li>
             <li>Intersection of Bayesian statistics and AI,</li>
-            <li>Applications in biomedical research.</li>
+            <li>Applications in psychiatry and cognitive neuroscience.</li>
           </ul>
         </div>
         <div class="home-links">
@@ -251,15 +251,15 @@
       <ul class="news-list">
         <li>
           <span class="news-date">Aug 2026</span>
-          <span>Giving a contributed talk at the Joint Statistical Meetings (JSM) 2026, Boston.</span>
+          <span>Giving a contributed talk at the Joint Statistical Meetings (JSM) 2026, Boston — <em>Robust Bayesian predictive model selection using Bregman divergence</em>.</span>
         </li>
         <li>
           <span class="news-date">May 2026</span>
-          <span>Receiving the <strong>Best Student Paper Award</strong> at the 39th New England Statistics Symposium (NESS) 2026 for <em>Robust model selection using likelihood as data</em>.</span>
+          <span>Receiving the <strong>Best Student Research Award</strong> at the 39th New England Statistics Symposium (NESS) 2026 for <em>Robust model selection using likelihood as data</em>.</span>
         </li>
         <li>
           <span class="news-date">May 2026</span>
-          <span>Giving a talk at the 39th New England Statistics Symposium (NESS) 2026.</span>
+          <span>Giving a contributed talk at the 39th New England Statistics Symposium (NESS) 2026 — <em>Robust model selection using likelihood as data</em>.</span>
         </li>
       </ul>
     </div>
@@ -291,7 +291,7 @@
         </div>
         <p class="authors"><strong>J. Choi</strong>, N. A. Spencer, and J. W. Miller</p>
         <p class="venue">Under review, 2026</p>
-        <p class="award-note">🏆 Best Student Paper Award, 39th New England Statistics Symposium (NESS) 2026</p>
+        <p class="award-note">🏆 Best Student Research Award, 39th New England Statistics Symposium (NESS) 2026</p>
       </div>
 
       <div class="pub-item">
@@ -451,8 +451,8 @@
       <div class="talk-item">
         <span class="talk-year">2026</span>
         <div>
-          <div class="talk-title">Robust model selection using likelihood as data <span class="badge b-contrib">Contributed</span></div>
-          <div class="talk-sub">39th New England Statistics Symposium (NESS) · 2026 &nbsp;·&nbsp; 🏆 Best Student Paper Award</div>
+          <div class="talk-title">Robust model selection using likelihood as data <span class="badge b-invited">Invited</span></div>
+          <div class="talk-sub">39th New England Statistics Symposium (NESS) · 2026</div>
         </div>
       </div>
 
@@ -528,7 +528,6 @@
           <div class="teach-name">Introduction to Mathematical Statistics I (STAT 3375)</div>
           <div class="teach-info">University of Connecticut · Fall 2024</div>
         </div>
-        <span class="teach-role">Instructor</span>
       </div>
     </div>
 
@@ -539,14 +538,12 @@
           <div class="teach-name">Mathematical Statistics I (STAT 5585)</div>
           <div class="teach-info">University of Connecticut · Fall 2025</div>
         </div>
-        <span class="teach-role">Guest Lecturer</span>
       </div>
       <div class="teach-item">
         <div>
           <div class="teach-name">Introduction to Mathematical Statistics II (STAT 3445)</div>
           <div class="teach-info">University of Connecticut · Spring 2024</div>
         </div>
-        <span class="teach-role">Guest Lecturer</span>
       </div>
     </div>
 
@@ -554,35 +551,27 @@
     <div>
       <div class="teach-item-sm">
         <div><div class="teach-name">Statistical Inference II (STAT 6515)</div><div class="teach-info">UConn · Spring 2026</div></div>
-        <span class="teach-role">TA</span>
       </div>
       <div class="teach-item-sm">
         <div><div class="teach-name">Mathematical Statistics I (STAT 5585)</div><div class="teach-info">UConn · Fall 2025</div></div>
-        <span class="teach-role">TA</span>
       </div>
       <div class="teach-item-sm">
         <div><div class="teach-name">Introduction to Mathematical Statistics II (STAT 3445)</div><div class="teach-info">UConn · Spring 2025, Fall 2025</div></div>
-        <span class="teach-role">TA</span>
       </div>
       <div class="teach-item-sm">
         <div><div class="teach-name">Applied Linear Regression in Data Science (STAT 3215Q)</div><div class="teach-info">UConn · Fall 2025</div></div>
-        <span class="teach-role">TA</span>
       </div>
       <div class="teach-item-sm">
         <div><div class="teach-name">Design of Experiments (STAT 3515)</div><div class="teach-info">UConn · Fall 2025</div></div>
-        <span class="teach-role">TA</span>
       </div>
       <div class="teach-item-sm">
         <div><div class="teach-name">Applied Machine Learning (STATGR 5293)</div><div class="teach-info">Columbia University · Spring 2018</div></div>
-        <span class="teach-role">TA</span>
       </div>
       <div class="teach-item-sm">
         <div><div class="teach-name">Statistical Computing in R (Math 398)</div><div class="teach-info">CSU Chico · Fall 2017</div></div>
-        <span class="teach-role">TA</span>
       </div>
       <div class="teach-item-sm">
         <div><div class="teach-name">Analytic Geometry and Calculus (Math 120) &amp; Elementary Linear Algebra (Math 235)</div><div class="teach-info">CSU Chico · Fall 2016–2017</div></div>
-        <span class="teach-role">TA</span>
       </div>
     </div>
   </div>
@@ -593,7 +582,7 @@
   <div class="inner">
     <h2 class="page-title">Contact</h2>
     <p style="font-size:1rem; color:var(--sub); margin-bottom:1.8rem; max-width:480px; line-height:1.8;">
-      Feel free to reach out about research, collaborations, or statistics. I typically respond within a few days.
+      I welcome inquiries about research and potential collaborations. Please feel free to reach out by email.
     </p>
     <div class="contact-block">
       <div class="contact-row">
