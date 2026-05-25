@@ -128,18 +128,19 @@
   .pub-item { padding: 0.9rem 0; border-bottom: 1px solid var(--border); }
   .pub-item:last-child { border-bottom: none; }
 
-  .pub-title-row { display: flex; align-items: baseline; gap: 0.55rem; flex-wrap: wrap; margin-bottom: 0.18rem; }
+    .pub-title-row { margin-bottom: 0.18rem; }
   .pub-title-row h3 {
     font-family: var(--serif); font-size: 1.06rem; font-weight: 500;
-    color: var(--midnight); line-height: 1.4;
+    color: var(--midnight); line-height: 1.5;
   }
-  .pub-inline-links { display: flex; gap: 0.4rem; flex-shrink: 0; }
-  .pub-inline-links a {
-    font-size: 0.76rem; color: var(--acc); font-weight: 500; text-decoration: none;
+  .pub-link-tag {
+    display: inline;
+    font-size: 0.72rem; color: var(--acc); font-weight: 500; text-decoration: none;
     white-space: nowrap; border: 1px solid var(--acc-lt); border-radius: 2px;
-    padding: 0.05rem 0.4rem; transition: background 0.15s;
+    padding: 0.05rem 0.38rem; margin-left: 0.45rem;
+    vertical-align: middle; transition: background 0.15s;
   }
-  .pub-inline-links a:hover { background: var(--acc-lt); }
+  .pub-link-tag:hover { background: var(--acc-lt); }
 
   .pub-item .authors { font-size: 0.9rem; color: var(--muted); margin-bottom: 0.1rem; }
   .pub-item .authors strong { font-weight: 600; color: var(--sub); }
@@ -251,15 +252,15 @@
       <ul class="news-list">
         <li>
           <span class="news-date">Aug 2026</span>
-          <span>Giving a contributed talk at the Joint Statistical Meetings (JSM) 2026, Boston — <em>Robust Bayesian predictive model selection using Bregman divergence</em>.</span>
+          <span>Upcoming contributed talk at the Joint Statistical Meetings (JSM) 2026, Boston — <em>Robust Bayesian predictive model selection using Bregman divergence</em>.</span>
         </li>
         <li>
           <span class="news-date">May 2026</span>
-          <span>Receiving the <strong>Best Student Research Award</strong> at the 39th New England Statistics Symposium (NESS) 2026 for <em>Robust model selection using likelihood as data</em>.</span>
+          <span>Received the <strong>Best Student Research Award</strong> at the 39th New England Statistics Symposium (NESS) 2026.</span>
         </li>
         <li>
           <span class="news-date">May 2026</span>
-          <span>Giving an invited talk at the 39th New England Statistics Symposium (NESS) 2026 — <em>Robust model selection using likelihood as data</em>.</span>
+          <span>Gave an invited talk at the 39th New England Statistics Symposium (NESS) 2026 — <em>Robust model selection using likelihood as data</em>.</span>
         </li>
       </ul>
     </div>
@@ -277,8 +278,7 @@
 
       <div class="pub-item">
         <div class="pub-title-row">
-          <h3>Supercharging Bayesian inference with reliable AI-informed priors</h3>
-          <div class="pub-inline-links"><a href="https://arxiv.org/abs/2605.09834" target="_blank">arXiv</a></div>
+          <h3>Supercharging Bayesian inference with reliable AI-informed priors <a class="pub-link-tag" href="https://arxiv.org/abs/2605.09834" target="_blank">arXiv</a></h3>
         </div>
         <p class="authors"><strong>J. Choi</strong> and S. O'Hagan</p>
         <p class="venue">Under review, 2026</p>
@@ -286,8 +286,7 @@
 
       <div class="pub-item">
         <div class="pub-title-row">
-          <h3>Robust model selection using likelihood as data</h3>
-          <div class="pub-inline-links"><a href="https://arxiv.org/abs/2602.23355" target="_blank">arXiv</a></div>
+          <h3>Robust model selection using likelihood as data <a class="pub-link-tag" href="https://arxiv.org/abs/2602.23355" target="_blank">arXiv</a></h3>
         </div>
         <p class="authors"><strong>J. Choi</strong>, N. A. Spencer, and J. W. Miller</p>
         <p class="venue">Under review, 2026</p>
@@ -312,8 +311,7 @@
 
       <div class="pub-item">
         <div class="pub-title-row">
-          <h3>Multivariate robust linear models for multivariate longitudinal data</h3>
-          <div class="pub-inline-links"><a href="https://doi.org/10.1016/j.jmva.2024.105392" target="_blank">Paper</a></div>
+          <h3>Multivariate robust linear models for multivariate longitudinal data <a class="pub-link-tag" href="https://doi.org/10.1016/j.jmva.2024.105392" target="_blank">Paper</a></h3>
         </div>
         <p class="authors">K. Lee, <strong>J. Choi</strong>, E. J. Jang, and D. Dey</p>
         <p class="venue"><em>Journal of Multivariate Analysis</em>, 206, 105392, 2025</p>
@@ -321,8 +319,7 @@
 
       <div class="pub-item">
         <div class="pub-title-row">
-          <h3>A Bayesian time-varying coefficient model for Cobb–Douglas production function</h3>
-          <div class="pub-inline-links"><a href="https://doi.org/10.1007/s10614-024-10598-1" target="_blank">Paper</a></div>
+          <h3>A Bayesian time-varying coefficient model for Cobb–Douglas production function <a class="pub-link-tag" href="https://doi.org/10.1007/s10614-024-10598-1" target="_blank">Paper</a></h3>
         </div>
         <p class="authors"><strong>J. Choi</strong>, S. Jo, and J. Kim</p>
         <p class="venue"><em>Computational Economics</em>, 2024</p>
@@ -330,8 +327,7 @@
 
       <div class="pub-item">
         <div class="pub-title-row">
-          <h3>Longitudinal canonical correlation analysis</h3>
-          <div class="pub-inline-links"><a href="https://doi.org/10.1093/jrsssc/qlad022" target="_blank">Paper</a></div>
+          <h3>Longitudinal canonical correlation analysis <a class="pub-link-tag" href="https://doi.org/10.1093/jrsssc/qlad022" target="_blank">Paper</a></h3>
         </div>
         <p class="authors">S. Lee, <strong>J. Choi</strong>, Z. Fang, and F. D. Bowman</p>
         <p class="venue"><em>Journal of the Royal Statistical Society Series C</em>, 2023</p>
@@ -339,8 +335,7 @@
 
       <div class="pub-item">
         <div class="pub-title-row">
-          <h3>Counting Eisenstein polynomials satisfying a condition from genus theory</h3>
-          <div class="pub-inline-links"><a href="https://math.colgate.edu/~integers/u58/u58.pdf" target="_blank">PDF</a></div>
+          <h3>Counting Eisenstein polynomials satisfying a condition from genus theory <a class="pub-link-tag" href="https://math.colgate.edu/~integers/u58/u58.pdf" target="_blank">PDF</a></h3>
         </div>
         <p class="authors"><strong>J. Choi</strong> and K. J. McGown</p>
         <p class="venue"><em>INTEGERS</em>, 20, 2020</p>
@@ -361,8 +356,7 @@
 
       <div class="pub-item">
         <div class="pub-title-row">
-          <h3>Association of performance on olfactory and cognitive screening tests with conversion to dementia in a biracial cohort of older adults</h3>
-          <div class="pub-inline-links"><a href="https://doi.org/10.1212/WNL.0000000000207578" target="_blank">Paper</a></div>
+          <h3>Association of performance on olfactory and cognitive screening tests with conversion to dementia in a biracial cohort of older adults <a class="pub-link-tag" href="https://doi.org/10.1212/WNL.0000000000207578" target="_blank">Paper</a></h3>
         </div>
         <p class="authors">J. N. Motter, <strong>J. Choi</strong>, S. Lee, T. E. Goldberg, S. Albert, and D. P. Devanand</p>
         <p class="venue"><em>Neurology</em>, 2023</p>
@@ -370,8 +364,7 @@
 
       <div class="pub-item">
         <div class="pub-title-row">
-          <h3>Intact olfactory and cognitive abilities predict lack of transition to dementia in a biracial sample of older adults</h3>
-          <div class="pub-inline-links"><a href="https://doi.org/10.1002/alz.066216" target="_blank">Paper</a></div>
+          <h3>Intact olfactory and cognitive abilities predict lack of transition to dementia in a biracial sample of older adults <a class="pub-link-tag" href="https://doi.org/10.1002/alz.066216" target="_blank">Paper</a></h3>
         </div>
         <p class="authors">J. N. Motter, <strong>J. Choi</strong>, S. Lee, T. E. Goldberg, and D. P. Devanand</p>
         <p class="venue"><em>Alzheimer's &amp; Dementia</em>, 18, e066216, 2022</p>
@@ -379,8 +372,7 @@
 
       <div class="pub-item">
         <div class="pub-title-row">
-          <h3>Models of depressive pseudoamnestic disorder</h3>
-          <div class="pub-inline-links"><a href="https://doi.org/10.1002/trc2.12335" target="_blank">Paper</a></div>
+          <h3>Models of depressive pseudoamnestic disorder <a class="pub-link-tag" href="https://doi.org/10.1002/trc2.12335" target="_blank">Paper</a></h3>
         </div>
         <p class="authors"><strong>J. Choi</strong>, S. Lee, J. N. Motter, and others</p>
         <p class="venue"><em>Alzheimer's &amp; Dementia: Translational Research &amp; Clinical Interventions</em>, 8(1), 2022</p>
@@ -388,8 +380,7 @@
 
       <div class="pub-item">
         <div class="pub-title-row">
-          <h3>Effects of restriction of activities and social isolation on risk of dementia in the community</h3>
-          <div class="pub-inline-links"><a href="https://doi.org/10.1017/S1041610221000776" target="_blank">Paper</a></div>
+          <h3>Effects of restriction of activities and social isolation on risk of dementia in the community <a class="pub-link-tag" href="https://doi.org/10.1017/S1041610221000776" target="_blank">Paper</a></h3>
         </div>
         <p class="authors">T. E. Goldberg, <strong>J. Choi</strong>, S. Lee, B. Gurland, and D. P. Devanand</p>
         <p class="venue"><em>International Psychogeriatrics</em>, 33(11), 1207–1215, 2021</p>
@@ -397,8 +388,7 @@
 
       <div class="pub-item">
         <div class="pub-title-row">
-          <h3>Association of white matter integrity with executive function and antidepressant treatment outcome in patients with late-life depression</h3>
-          <div class="pub-inline-links"><a href="https://doi.org/10.1016/j.jagp.2021.01.004" target="_blank">Paper</a></div>
+          <h3>Association of white matter integrity with executive function and antidepressant treatment outcome in patients with late-life depression <a class="pub-link-tag" href="https://doi.org/10.1016/j.jagp.2021.01.004" target="_blank">Paper</a></h3>
         </div>
         <p class="authors">X. He, E. Pueraro, Y. Kim, and others including <strong>J. Choi</strong></p>
         <p class="venue"><em>The American Journal of Geriatric Psychiatry</em>, 29(12), 1188–1198, 2021</p>
@@ -406,8 +396,7 @@
 
       <div class="pub-item">
         <div class="pub-title-row">
-          <h3>Slowed processing speed disrupts patient expectancy in late life depression</h3>
-          <div class="pub-inline-links"><a href="https://doi.org/10.1016/j.jagp.2020.11.001" target="_blank">Paper</a></div>
+          <h3>Slowed processing speed disrupts patient expectancy in late life depression <a class="pub-link-tag" href="https://doi.org/10.1016/j.jagp.2020.11.001" target="_blank">Paper</a></h3>
         </div>
         <p class="authors">B. R. Rutherford, C. J. Choi, <strong>J. Choi</strong>, and others</p>
         <p class="venue"><em>The American Journal of Geriatric Psychiatry</em>, 29(7), 619–630, 2021</p>
@@ -415,8 +404,7 @@
 
       <div class="pub-item">
         <div class="pub-title-row">
-          <h3>Exposure to adverse events and associations with stress levels and the practice of yoga</h3>
-          <div class="pub-inline-links"><a href="https://doi.org/10.1089/acm.2020.0077" target="_blank">Paper</a></div>
+          <h3>Exposure to adverse events and associations with stress levels and the practice of yoga <a class="pub-link-tag" href="https://doi.org/10.1089/acm.2020.0077" target="_blank">Paper</a></h3>
         </div>
         <p class="authors">D. Neumark-Sztainer, M. M. Wall, <strong>J. Choi</strong>, and others</p>
         <p class="venue"><em>The Journal of Alternative and Complementary Medicine</em>, 26(6), 482–490, 2020</p>
@@ -424,8 +412,7 @@
 
       <div class="pub-item">
         <div class="pub-title-row">
-          <h3>Odor identification impairment and change with cholinesterase inhibitor treatment in mild cognitive impairment</h3>
-          <div class="pub-inline-links"><a href="https://doi.org/10.3233/JAD-200021" target="_blank">Paper</a></div>
+          <h3>Odor identification impairment and change with cholinesterase inhibitor treatment in mild cognitive impairment <a class="pub-link-tag" href="https://doi.org/10.3233/JAD-200021" target="_blank">Paper</a></h3>
         </div>
         <p class="authors">D. P. Devanand, X. Liu, R. E. Chunga, and others including <strong>J. Choi</strong></p>
         <p class="venue"><em>Journal of Alzheimer's Disease</em>, 75(3), 845–854, 2020</p>
@@ -433,8 +420,7 @@
 
       <div class="pub-item">
         <div class="pub-title-row">
-          <h3>Neuroanatomical predictors of L-DOPA response in older adults with psychomotor slowing and depression</h3>
-          <div class="pub-inline-links"><a href="https://doi.org/10.1016/j.jad.2020.01.066" target="_blank">Paper</a></div>
+          <h3>Neuroanatomical predictors of L-DOPA response in older adults with psychomotor slowing and depression <a class="pub-link-tag" href="https://doi.org/10.1016/j.jad.2020.01.066" target="_blank">Paper</a></h3>
         </div>
         <p class="authors">B. R. Rutherford, <strong>J. Choi</strong>, M. Slifstein, and others</p>
         <p class="venue"><em>Journal of Affective Disorders</em>, 265, 439–444, 2020</p>
