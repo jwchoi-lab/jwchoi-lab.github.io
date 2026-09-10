@@ -20,86 +20,34 @@ jobs:
         run: |
           python3 - <<'PY'
           from pathlib import Path
-
           p = Path('index.html')
           s = p.read_text(encoding='utf-8')
-          if 'https://jwchoi-lab.github.io/' in s and 'application/ld+json' in s:
+          if 'application/ld+json' in s and 'https://jwchoi-lab.github.io/' in s:
               print('SEO metadata already present')
               raise SystemExit(0)
-
           old = '<title>Jongwoo Choi</title>'
           if old not in s:
               raise SystemExit('Expected title tag not found')
-
-          new = '''<title>Jongwoo Choi | Harvard Biostatistics &amp; Bayesian Statistics</title>
-<meta name="description" content="Jongwoo Choi is a postdoctoral fellow in Biostatistics at Harvard University researching Bayesian model assessment, robustness to model misspecification, statistical perspectives on AI and LLMs, and applications in psychiatry and cognitive neuroscience." />
-<meta name="author" content="Jongwoo Choi" />
-<meta name="robots" content="index, follow, max-image-preview:large" />
-<link rel="canonical" href="https://jwchoi-lab.github.io/" />
-
-<meta property="og:type" content="profile" />
-<meta property="og:title" content="Jongwoo Choi | Harvard Biostatistics &amp; Bayesian Statistics" />
-<meta property="og:description" content="Postdoctoral fellow in Biostatistics at Harvard University. Research in Bayesian model assessment, model misspecification, statistical AI/LLMs, psychiatry, and cognitive neuroscience." />
-<meta property="og:url" content="https://jwchoi-lab.github.io/" />
-<meta property="og:image" content="https://jwchoi-lab.github.io/photo.jpg" />
-<meta property="profile:first_name" content="Jongwoo" />
-<meta property="profile:last_name" content="Choi" />
-
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Jongwoo Choi | Harvard Biostatistics &amp; Bayesian Statistics" />
-<meta name="twitter:description" content="Postdoctoral fellow in Biostatistics at Harvard University researching Bayesian statistics, robustness, AI/LLMs, psychiatry, and cognitive neuroscience." />
-<meta name="twitter:image" content="https://jwchoi-lab.github.io/photo.jpg" />
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "url": "https://jwchoi-lab.github.io/",
-  "dateModified": "2026-09-10",
-  "mainEntity": {
-    "@id": "https://jwchoi-lab.github.io/#jongwoo-choi",
-    "@type": "Person",
-    "name": "Jongwoo Choi",
-    "alternateName": "J. Choi",
-    "description": "Postdoctoral fellow in the Department of Biostatistics at Harvard University researching Bayesian model assessment, robustness to model misspecification, statistical perspectives on AI and LLMs, psychiatry, and cognitive neuroscience.",
-    "url": "https://jwchoi-lab.github.io/",
-    "image": "https://jwchoi-lab.github.io/photo.jpg",
-    "jobTitle": "Postdoctoral Fellow in Biostatistics",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Harvard T.H. Chan School of Public Health",
-      "url": "https://www.hsph.harvard.edu/",
-      "parentOrganization": {
-        "@type": "CollegeOrUniversity",
-        "name": "Harvard University",
-        "url": "https://www.harvard.edu/"
-      }
-    },
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "University of Connecticut",
-      "url": "https://uconn.edu/"
-    },
-    "sameAs": [
-      "https://scholar.google.com/citations?hl=en&user=3Ltr0akAAAAJ",
-      "https://github.com/jwchoi-lab/",
-      "https://www.linkedin.com/in/jchoi7",
-      "https://statistics.uconn.edu/person/jongwoo-choi/"
-    ],
-    "knowsAbout": [
-      "Bayesian statistics",
-      "Bayesian model assessment",
-      "Model misspecification",
-      "Robust statistics",
-      "Large language models",
-      "Artificial intelligence",
-      "Psychiatry",
-      "Cognitive neuroscience"
-    ]
-  }
-}
-</script>'''
-
+          lines = [
+              '<title>Jongwoo Choi | Harvard Biostatistics &amp; Bayesian Statistics</title>',
+              '<meta name="description" content="Jongwoo Choi is a postdoctoral fellow in Biostatistics at Harvard University researching Bayesian model assessment, robustness to model misspecification, statistical perspectives on AI and LLMs, and applications in psychiatry and cognitive neuroscience." />',
+              '<meta name="author" content="Jongwoo Choi" />',
+              '<meta name="robots" content="index, follow, max-image-preview:large" />',
+              '<link rel="canonical" href="https://jwchoi-lab.github.io/" />',
+              '<meta property="og:type" content="profile" />',
+              '<meta property="og:title" content="Jongwoo Choi | Harvard Biostatistics &amp; Bayesian Statistics" />',
+              '<meta property="og:description" content="Postdoctoral fellow in Biostatistics at Harvard University. Research in Bayesian model assessment, model misspecification, statistical AI/LLMs, psychiatry, and cognitive neuroscience." />',
+              '<meta property="og:url" content="https://jwchoi-lab.github.io/" />',
+              '<meta property="og:image" content="https://jwchoi-lab.github.io/photo.jpg" />',
+              '<meta property="profile:first_name" content="Jongwoo" />',
+              '<meta property="profile:last_name" content="Choi" />',
+              '<meta name="twitter:card" content="summary_large_image" />',
+              '<meta name="twitter:title" content="Jongwoo Choi | Harvard Biostatistics &amp; Bayesian Statistics" />',
+              '<meta name="twitter:description" content="Postdoctoral fellow in Biostatistics at Harvard University researching Bayesian statistics, robustness, AI/LLMs, psychiatry, and cognitive neuroscience." />',
+              '<meta name="twitter:image" content="https://jwchoi-lab.github.io/photo.jpg" />',
+              '<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfilePage","url":"https://jwchoi-lab.github.io/","dateModified":"2026-09-10","mainEntity":{"@id":"https://jwchoi-lab.github.io/#jongwoo-choi","@type":"Person","name":"Jongwoo Choi","alternateName":"J. Choi","description":"Postdoctoral fellow in the Department of Biostatistics at Harvard University researching Bayesian model assessment, robustness to model misspecification, statistical perspectives on AI and LLMs, psychiatry, and cognitive neuroscience.","url":"https://jwchoi-lab.github.io/","image":"https://jwchoi-lab.github.io/photo.jpg","jobTitle":"Postdoctoral Fellow in Biostatistics","worksFor":{"@type":"Organization","name":"Harvard T.H. Chan School of Public Health","url":"https://www.hsph.harvard.edu/","parentOrganization":{"@type":"CollegeOrUniversity","name":"Harvard University","url":"https://www.harvard.edu/"}},"alumniOf":{"@type":"CollegeOrUniversity","name":"University of Connecticut","url":"https://uconn.edu/"},"sameAs":["https://scholar.google.com/citations?hl=en&user=3Ltr0akAAAAJ","https://github.com/jwchoi-lab/","https://www.linkedin.com/in/jchoi7","https://statistics.uconn.edu/person/jongwoo-choi/"],"knowsAbout":["Bayesian statistics","Bayesian model assessment","Model misspecification","Robust statistics","Large language models","Artificial intelligence","Psychiatry","Cognitive neuroscience"]}}</script>'
+          ]
+          new = '\n'.join(lines)
           p.write_text(s.replace(old, new, 1), encoding='utf-8')
           PY
       - name: Commit SEO update
