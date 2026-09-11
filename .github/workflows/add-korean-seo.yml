@@ -1,0 +1,37 @@
+name: Add Korean SEO links
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/add-korean-seo.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update index
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          if 'hreflang="ko"' not in s:
+              s=s.replace('<link rel="canonical" href="https://jwchoi-lab.github.io/" />','<link rel="canonical" href="https://jwchoi-lab.github.io/" />\n<link rel="alternate" hreflang="en" href="https://jwchoi-lab.github.io/" />\n<link rel="alternate" hreflang="ko" href="https://jwchoi-lab.github.io/ko/" />\n<link rel="alternate" hreflang="x-default" href="https://jwchoi-lab.github.io/" />')
+          s=s.replace('"alternateName":"J. Choi"','"alternateName":["J. Choi","최종우"]')
+          if '>한국어<' not in s:
+              s=s.replace('<a href="https://github.com/jwchoi-lab/" target="_blank">GitHub</a>','<a href="https://github.com/jwchoi-lab/" target="_blank">GitHub</a>\n          <a href="/ko/" hreflang="ko">한국어</a>',1)
+          p.write_text(s,encoding='utf-8')
+          PY
+      - name: Commit
+        run: |
+          if git diff --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git commit -m 'Connect Korean and English profile SEO'
+          git push
